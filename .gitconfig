@@ -1,0 +1,25 @@
+[user]
+	signingkey = 3BE37447C8589A32
+	email = 21159658+ArchitektApx@users.noreply.github.com
+	name = ArchitektApx
+[commit]
+	gpgsign = true
+[gpg]
+  program = /usr/bin/gpg
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[advice]
+	detachedHead = false
+[init]
+	defaultBranch = master
+[fetch]
+	prune = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
